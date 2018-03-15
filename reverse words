@@ -1,0 +1,29 @@
+ function spinWords(sentence){
+  //this function is reversing the word with different methods
+  //split will separate each character
+  //reverse will switch and rearrange the letters
+  //join will put the words back together
+    function reverse(s) {
+        return s.split('').reverse().join('');
+    }
+  //applying these methods to variables
+    var words = sentence.split(" ");
+    var strings = [];
+    //for loop so the function is applied to every word
+    for (var i=0; i<words.length; i++) {
+        var word = words[i].toString();
+        var backwards = reverse(word);
+        //conditionals
+        if (word.length>=5){
+            strings.push(backwards);
+            console.log(backwards);
+            //return backwards;
+        } else {
+            strings.push(word);
+            console.log(word);
+            //return word;
+        }
+    }
+
+    return strings.join(' ');
+}
