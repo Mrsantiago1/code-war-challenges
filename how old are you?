@@ -1,0 +1,5 @@
+function calculateAge(then, now) {
+  let diff = now - then;
+  if (diff > 0) return `You are ${diff} year${diff>1?'s':''} old.`;
+  if (diff < 0) return `You will be born in ${-diff} year${-diff>1?'s':''}.`;
+  if (diff === 0) return `You were born this very year!`;
